@@ -1,0 +1,51 @@
+.Button {
+	background: $purple;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 3px 0 darken($purple, 20%);
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	transition-duration: .3s;
+
+	&:disabled {
+		opacity: .4;
+		cursor: default;
+	}
+
+	&:hover:not(:disabled):not(.Button__link) {
+		background: lighten($purple, 5%);
+		box-shadow: 0 6px $m-size rgba(darken($purple, 40%), .4);
+		border-radius: 2px;
+	}
+
+	&__big {
+		display: block;
+		width: 100%;
+		padding: $m-size;
+		margin-bottom: 2.4rem;
+		font-size: $m-size;
+
+		@media screen and (min-width: $bp-desktop) {
+
+			margin-bottom: 3.2rem;
+			font-size: 3.2rem;
+		}
+	}
+
+	&__small {
+		padding: 1rem;
+	}
+
+	&__link {
+		background: none;
+		border: none;
+		color: $off-white;
+		padding: 0;
+		box-shadow: none;
+
+		&:hover:not(:disabled) {
+			color: #fff;
+		}
+	}
+}

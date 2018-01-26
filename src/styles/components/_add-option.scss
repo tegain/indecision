@@ -1,0 +1,39 @@
+.AddOption {
+	padding: $m-size;
+
+	&__error {
+		margin: 0;
+		padding-bottom: $m-size;
+		text-align: center;
+		color: #ffc82f;
+		font-style: italic;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media screen and (min-width: $bp-desktop) {
+			flex-direction: row;
+		}
+	}
+
+	&__input {
+		padding: 1rem;
+		flex-grow: 1;
+		margin-bottom: $m-size;
+		background: $dark-blue;
+		border: none;
+		color: $off-white;
+
+		@media screen and (min-width: $bp-desktop) {
+			padding: .75rem;
+			margin-bottom: 0;
+			margin-right: $m-size;
+		}
+	}
+
+	&__submit {
+	}
+}
